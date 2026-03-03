@@ -1,0 +1,161 @@
+# =============================================================================
+# NetOps Project - Git Ignore
+# Projeto em grupo: ignorar ficheiros locais, mas manter configurações partilhadas
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# -----------------------------------------------------------------------------
+# Ansible
+# -----------------------------------------------------------------------------
+*.retry
+.ansible/
+ansible.log
+
+# -----------------------------------------------------------------------------
+# Network Device Images (large files)
+# -----------------------------------------------------------------------------
+*.tar
+*.tar.xz
+*.tar.gz
+*.vmdk
+*.qcow2
+*.iso
+*.ova
+*.box
+vrnetlab/
+
+# -----------------------------------------------------------------------------
+# ContainerLab
+# -----------------------------------------------------------------------------
+clab-*/
+.tls/
+*.log
+
+# -----------------------------------------------------------------------------
+# Telemetry & Monitoring
+# -----------------------------------------------------------------------------
+# Prometheus data
+telemetry/prometheus/data/
+# Grafana data
+telemetry/grafana/data/
+telemetry/grafana/*.db
+# gNMIc logs
+*.gnmic.log
+
+# -----------------------------------------------------------------------------
+# Output & Generated Files (commit only templates, not generated configs)
+# -----------------------------------------------------------------------------
+part1/output/*.txt
+part1/output/*.json
+part1/output/*.xml
+part1/output/*.csv
+# Keep .gitkeep or README files
+!part1/output/.gitkeep
+!part1/output/README.md
+
+# -----------------------------------------------------------------------------
+# Logs & Temporary Files
+# -----------------------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+
+# -----------------------------------------------------------------------------
+# IDEs & Editors
+# -----------------------------------------------------------------------------
+# VSCode
+.vscode/
+*.code-workspace
+# PyCharm
+.idea/
+*.iml
+# Vim
+*.swp
+*.swo
+*.swn
+# Emacs
+*~
+\#*\#
+.\#*
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------------------------------------------------------
+# OS Specific
+# -----------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+# Linux
+.directory
+
+# -----------------------------------------------------------------------------
+# Credentials & Secrets (NUNCA COMMIT!)
+# -----------------------------------------------------------------------------
+*.key
+*.pem
+*.crt
+*.pfx
+*_rsa
+*_dsa
+*_ecdsa
+*_ed25519
+.env
+.env.local
+secrets/
+credentials/
+passwords.txt
+auth.yml
+vault-pass.txt
+
+# -----------------------------------------------------------------------------
+# Documentation Builds
+# -----------------------------------------------------------------------------
+docs/_build/
+site/
+
+# -----------------------------------------------------------------------------
+# Backup Files
+# -----------------------------------------------------------------------------
+*.bak
+*.backup
+*.old
+*~
+
+# -----------------------------------------------------------------------------
+# Data Files (keep structure, ignore large datasets if needed)
+# -----------------------------------------------------------------------------
+# Uncomment se tiveres datasets grandes que não devem ser commitados:
+# data/*.csv
+# data/*.json
